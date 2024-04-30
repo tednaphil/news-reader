@@ -8,7 +8,7 @@ function Articles({articles}) {
             key={article.publishedAt}
             title={article.title}
             image={article.urlToImage}
-            date={article.publishedAt}
+            date={article.date}
             description={article.description}
             />
         )

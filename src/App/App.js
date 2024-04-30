@@ -13,7 +13,7 @@ function App() {
   const [error, setError] = useState('');
 
   useEffect(() => {
-    getNews()
+    // getNews()
     const newData = cleanData(data.articles)
     setArticles(newData)
   })
@@ -22,6 +22,9 @@ function App() {
     const updatedData = articlesArray
 
     updatedData.forEach(article => {
+      const splitDate = article.publishedAt.split('T')[0].split('-')
+      article.date = `${splitDate[1]}/${splitDate[2]}/${splitDate[0]}`
+      // console.log(article.date)
       if(!article.urlToImage) {
         article.urlToImage = 'https://media.istockphoto.com/id/1312793811/vector/hand-drawn-newspaper-sketch-icon.jpg?s=612x612&w=0&k=20&c=G4XPIMfzF2b0YARccTEYTltB4P0j59xMeLymwFs7FSE='
       }
