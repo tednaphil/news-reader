@@ -31,14 +31,14 @@
   <img src="https://img.shields.io/badge/Lighthouse-F44B21?logo=lighthouse&logoColor=fff&style=for-the-badge" alt="lighthouse badge">
   <img src="https://img.shields.io/badge/Webpack-8DD6F9?logo=webpack&logoColor=000&style=for-the-badge" alt="webpack badge">
   <img src="https://img.shields.io/badge/Vercel-000?logo=vercel&logoColor=fff&style=for-the-badge" alt="vercel badge">
-  <!-- other badges 
+  other badges 
 </div>
 
 ## Installation Instructions:
-<!-- - add list of instructions 
+ - add list of instructions 
 
 ## Context:
-<!-- wins, challenges, time spent, goals, approaches etc 
+ wins, challenges, time spent, goals, approaches etc 
 - ~ hours to complete test suite and functionality
 - Goals
   ```
@@ -49,3 +49,6 @@
 - Challenges
   ```
   ```
+
+## Wireframe:
+<img src='.github/NewReader Wireframe.png' alt='news reader wireframe diagram'/>
