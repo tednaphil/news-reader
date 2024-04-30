@@ -42,7 +42,7 @@ function App() {
       </header>
       <Routes>
         <Route path='/' element={<Articles articles={articles} />}></Route>
-        <Route path=':articleTitle' element={<Article/>}></Route>
+        <Route path=':articleTitle' element={<Article articles={articles}/>}></Route>
         <Route path='*' element={<ErrorPage error={error} />}></Route>
       </Routes>
     </div>
