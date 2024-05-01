@@ -5,10 +5,11 @@ function Search({setQuery}) {
     const [search, setSearch] = useState('')
 
     function updateSearch(e) {
-        setSearch(e)
-        setQuery(e)
+        const query = e.toLowerCase()
+        setSearch(query)
+        setQuery(query)
     }
-    
+
     return (
         <>
           <input type='text' placeholder='search' value={search} onChange={(e) => {updateSearch(e.target.value)}}></input>
