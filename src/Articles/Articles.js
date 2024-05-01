@@ -13,11 +13,21 @@ function Articles({articles}) {
             />
         )
     })
-    return(
-        <>
-        {previews}
-        </>
-    )
+    if(articles.length) {
+        return(
+            <>
+            {previews}
+            </>
+        )
+    }
+    if (!articles.length) {
+        return(
+            <>
+            <h2>No results</h2>
+            </>
+        )
+    }
+    
 }
 
 export default Articles

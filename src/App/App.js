@@ -6,7 +6,7 @@ import Article from '../Article/Article';
 import ErrorPage from '../ErrorPage/ErrorPage';
 import Search from '../Search/Search';
 import data from '../mock-data';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 
 
 function App() {
@@ -14,6 +14,7 @@ function App() {
   const [filteredArticles, setFilteredArticles] = useState([]);
   const [error, setError] = useState('');
   const [query, setQuery] = useState('');
+  const {pathname} = useLocation()
 
   useEffect(() => {
     // getNews()
@@ -58,13 +59,13 @@ function App() {
       <div className="App">
         <header className="App-header">
           <h1>News Reader</h1>
-          <Search setQuery={setQuery} />
+          {pathname === '/' && <Search setQuery={setQuery} />}
         </header>
-        {query.trim().length > 0 && <p>Results: {filteredArticles.length}</p>}
+        {/* {query.trim().length > 0 && <p>Results: {filteredArticles.length}</p>} */}
         <Routes>
           <Route path='/' element={<Articles articles={filteredArticles} />}></Route>
-          <Route path=':articleTitle' element={<Article articles={articles}/>}></Route>
-          <Route path='*' element={<ErrorPage error={error} />}></Route>
+          <Route path='/:articleTitle' element={<Article articles={articles}/>}></Route>
+          <Route path='/*' element={<ErrorPage error={error} />}></Route>
         </Routes>
       </div>
   )};
