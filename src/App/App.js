@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import Articles from '../Articles/Articles';
 import Article from '../Article/Article';
 import ErrorPage from '../ErrorPage/ErrorPage';
+import Search from '../Search/Search';
 import data from '../mock-data';
 import { Routes, Route } from 'react-router-dom';
 
@@ -11,6 +12,7 @@ import { Routes, Route } from 'react-router-dom';
 function App() {
   const [articles, setArticles] = useState([]);
   const [error, setError] = useState('');
+  const [query, setQuery] = useState('');
 
   useEffect(() => {
     // getNews()
@@ -39,6 +41,7 @@ function App() {
       <div className="App">
         <header className="App-header">
           <h1>News Reader</h1>
+          <Search setQuery={setQuery} />
         </header>
         <Routes>
           <Route path='/' element={<Articles articles={articles} />}></Route>
