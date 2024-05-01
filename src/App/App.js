@@ -16,7 +16,7 @@ function App() {
     // getNews()
     const newData = cleanData(data.articles)
     setArticles(newData)
-  })
+  }, [])
 
   function cleanData(articlesArray) {
     const updatedData = articlesArray
@@ -34,19 +34,19 @@ function App() {
     })
     return updatedData
   }
-
-  return (
-    <div className="App">
-      <header className="App-header">
-        <h1>News Reader</h1>
-      </header>
-      <Routes>
-        <Route path='/' element={<Articles articles={articles} />}></Route>
-        <Route path=':articleTitle' element={<Article articles={articles}/>}></Route>
-        <Route path='*' element={<ErrorPage error={error} />}></Route>
-      </Routes>
-    </div>
-  );
+  if (articles.length) {
+    return (
+      <div className="App">
+        <header className="App-header">
+          <h1>News Reader</h1>
+        </header>
+        <Routes>
+          <Route path='/' element={<Articles articles={articles} />}></Route>
+          <Route path=':articleTitle' element={<Article articles={articles}/>}></Route>
+          <Route path='*' element={<ErrorPage error={error} />}></Route>
+        </Routes>
+      </div>
+  )};
 }
 
 export default App;
