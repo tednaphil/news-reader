@@ -18,9 +18,10 @@ function App() {
 
   useEffect(() => {
     // getNews()
-    const newData = cleanData(data.articles)
-    setArticles(newData)
-    setFilteredArticles(newData)
+    fetchNews()
+    // const newData = cleanData(data.articles)
+    // setArticles(newData)
+    // setFilteredArticles(newData)
   }, [])
 
   useEffect(() => {
@@ -31,6 +32,18 @@ function App() {
     }
   }, [query])
 
+  const fetchNews = async () => {
+    try {
+      const news = await getNews()
+      const newData = cleanData(news.articles)
+      setArticles(newData)
+      setFilteredArticles(newData)
+      // console.log(news)
+    } catch (error) {
+      setError(`${error}`)
+    }
+  }
+  
   function cleanData(articlesArray) {
     const updatedData = articlesArray
 
