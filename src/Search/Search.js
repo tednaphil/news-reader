@@ -1,5 +1,6 @@
 import { useState } from "react";
 import './Search.css';
+import PropTypes from 'prop-types';
 
 function Search({setQuery}) {
     const [search, setSearch] = useState('')

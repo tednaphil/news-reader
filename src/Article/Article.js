@@ -1,6 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import './Article.css';
 import { useState, useEffect } from "react";
+import PropTypes from 'prop-types';
 
 function Article({articles}) {
     const { articleTitle } = useParams()

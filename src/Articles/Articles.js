@@ -1,5 +1,6 @@
 import './Articles.css';
 import Preview from "../Preview/Preview";
+import PropTypes from 'prop-types';
 
 function Articles({articles}) {
     const previews = articles.map(article => {

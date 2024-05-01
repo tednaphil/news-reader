@@ -9,6 +9,7 @@ import data from '../mock-data';
 import { Routes, Route, useLocation } from 'react-router-dom';
 
 
+
 function App() {
   const [articles, setArticles] = useState([]);
   const [filteredArticles, setFilteredArticles] = useState([]);

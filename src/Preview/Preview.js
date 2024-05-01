@@ -1,5 +1,6 @@
 import './Preview.css'
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 function Preview({ image, title, description, date }) {
     return (
