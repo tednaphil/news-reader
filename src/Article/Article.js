@@ -1,4 +1,5 @@
 import { useParams, Link } from "react-router-dom";
+import './Article.css';
 import { useState, useEffect } from "react";
 
 function Article({articles}) {
@@ -13,14 +14,19 @@ function Article({articles}) {
 
     return (
         <>
-            <Link to='/'>Back Home</Link>
-            <img src={chosenArticle.urlToImage} alt={`${chosenArticle.description}`} />
-            <p className="date">{chosenArticle.date}</p>
-            <p className="source">source: {chosenArticle.source.name}</p>
-            <aside>
-                <h2>{chosenArticle.title}</h2>
-                <p>{chosenArticle.content}</p>
+        <Link to='/'>Back Home</Link>
+        <div className='article-view'>
+            <aside className='summary-column'>
+                <img src={chosenArticle.urlToImage} alt={`${chosenArticle.description}`} />
+                <p className="date">{chosenArticle.date}</p>
+                <p className="source">source: {chosenArticle.source.name}</p>
             </aside>
+            <main className='content-column'>
+                <h2>{chosenArticle.title}</h2>
+                {chosenArticle.author && <h3>Author: {chosenArticle.author}</h3>}
+                <p>{chosenArticle.content}</p>
+            </main>
+        </div>
         </>
     )
 }

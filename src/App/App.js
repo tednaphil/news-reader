@@ -24,7 +24,7 @@ function App() {
 
   useEffect(() => {
     const filtered = filterArticles(query)
-    console.log({filtered})
+    // console.log({filtered})
     if (query.trim().length){
       setFilteredArticles(filtered)
     }
@@ -48,7 +48,7 @@ function App() {
   }
 
   function filterArticles(queryInput) {
-    console.log({queryInput})
+    // console.log({queryInput})
     // articles.forEach(article => console.log(article.title.includes(queryInput)))
     return articles.filter(article => article.title.toLowerCase().includes(queryInput) || article.description.toLowerCase().includes(queryInput))
   }
