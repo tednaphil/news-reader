@@ -22,3 +22,22 @@
     padding-right: 10px;
 }
 
+@media screen and (max-width: 1023px) {
+    .article-view {
+        flex-direction: column;
+        & img {
+            margin: 0 auto;
+        }
+    }
+    .content-column {
+        padding: 0 20px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .summary-column {
+        & img {
+            width: 300px;
+        }
+    }
+}
