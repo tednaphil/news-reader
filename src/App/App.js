@@ -60,6 +60,7 @@ function App() {
           <h1>News Reader</h1>
           <Search setQuery={setQuery} />
         </header>
+        {query.trim().length > 0 && <p>Results: {filteredArticles.length}</p>}
         <Routes>
           <Route path='/' element={<Articles articles={filteredArticles} />}></Route>
           <Route path=':articleTitle' element={<Article articles={articles}/>}></Route>
