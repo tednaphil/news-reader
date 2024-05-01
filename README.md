@@ -1,8 +1,8 @@
 # <p align="center">🗞️News Reader📰</p>
 
-<!-- <p align="center">Abstract</p>
+<p align="center">Browse today's top articles <br/> <a href='https://news-reader-rho.vercel.app/'>link here</a></p>
 
-### <p align="center">Contributors</p>
+<!-- ### <p align="center">Contributors</p>
 <div align="center">
   
   [name](github), [name](github)
