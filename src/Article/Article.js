@@ -25,6 +25,7 @@ function Article({articles}) {
                 <h2>{chosenArticle.title}</h2>
                 {chosenArticle.author && <h3>Author: {chosenArticle.author}</h3>}
                 <p>{chosenArticle.content}</p>
+                <a href={chosenArticle.url}>See full article</a>
             </main>
         </div>
         </>

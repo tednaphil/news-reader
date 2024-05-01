@@ -12,7 +12,7 @@ function Search({setQuery}) {
 
     return (
         <>
-          <input type='text' placeholder='search' value={search} onChange={(e) => {updateSearch(e.target.value)}}></input>
+          <input name='search bar' type='text' placeholder='search' value={search} onChange={(e) => {updateSearch(e.target.value)}}></input>
         </>
     )
 }

@@ -17,11 +17,10 @@ function App() {
   const {pathname} = useLocation()
 
   useEffect(() => {
-    // getNews()
-    fetchNews()
-    // const newData = cleanData(data.articles)
-    // setArticles(newData)
-    // setFilteredArticles(newData)
+    // fetchNews()
+    const newData = cleanData(data.articles)
+    setArticles(newData)
+    setFilteredArticles(newData)
   }, [])
 
   useEffect(() => {
@@ -43,14 +42,13 @@ function App() {
       setError(`${error}`)
     }
   }
-  
+
   function cleanData(articlesArray) {
     const updatedData = articlesArray
 
     updatedData.forEach(article => {
       const splitDate = article.publishedAt.split('T')[0].split('-')
       article.date = `${splitDate[1]}/${splitDate[2]}/${splitDate[0]}`
-      //add keywords array for searchability?
       if(!article.urlToImage) {
         article.urlToImage = 'https://media.istockphoto.com/id/1312793811/vector/hand-drawn-newspaper-sketch-icon.jpg?s=612x612&w=0&k=20&c=G4XPIMfzF2b0YARccTEYTltB4P0j59xMeLymwFs7FSE='
       }
@@ -77,7 +75,7 @@ function App() {
         {/* {query.trim().length > 0 && <p>Results: {filteredArticles.length}</p>} */}
         <Routes>
           <Route path='/' element={<Articles articles={filteredArticles} />}></Route>
-          <Route path='/:articleTitle' element={<Article articles={articles}/>}></Route>
+          <Route path='/articles/:articleTitle' element={<Article articles={articles}/>}></Route>
           <Route path='/*' element={<ErrorPage error={error} />}></Route>
         </Routes>
       </div>

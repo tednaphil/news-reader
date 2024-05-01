@@ -9,7 +9,7 @@ function Preview({ image, title, description, date }) {
             <div className='preview-text'>
                 <h2>{title}</h2>
                 <p><span>{date}</span> | {description}</p>
-                <Link to={`${title}`}>Read Article</Link>
+                <Link to={`/articles/${title}`}>Read Article</Link>
             </div>
         </section>
         </>
