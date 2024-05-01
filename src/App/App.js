@@ -11,6 +11,7 @@ import { Routes, Route } from 'react-router-dom';
 
 function App() {
   const [articles, setArticles] = useState([]);
+  const [filteredArticles, setFilteredArticles] = useState([]);
   const [error, setError] = useState('');
   const [query, setQuery] = useState('');
 
@@ -18,7 +19,16 @@ function App() {
     // getNews()
     const newData = cleanData(data.articles)
     setArticles(newData)
+    setFilteredArticles(newData)
   }, [])
+
+  useEffect(() => {
+    const filtered = filterArticles(query)
+    console.log({filtered})
+    if (query.trim().length){
+      setFilteredArticles(filtered)
+    }
+  }, [query])
 
   function cleanData(articlesArray) {
     const updatedData = articlesArray
@@ -36,6 +46,13 @@ function App() {
     })
     return updatedData
   }
+
+  function filterArticles(queryInput) {
+    console.log({queryInput})
+    articles.forEach(article => console.log(article.title.includes(queryInput)))
+    return articles.filter(article => article.title.includes(queryInput))
+  }
+
   if (articles.length) {
     return (
       <div className="App">
@@ -44,7 +61,7 @@ function App() {
           <Search setQuery={setQuery} />
         </header>
         <Routes>
-          <Route path='/' element={<Articles articles={articles} />}></Route>
+          <Route path='/' element={<Articles articles={filteredArticles} />}></Route>
           <Route path=':articleTitle' element={<Article articles={articles}/>}></Route>
           <Route path='*' element={<ErrorPage error={error} />}></Route>
         </Routes>

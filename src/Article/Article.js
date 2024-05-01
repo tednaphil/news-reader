@@ -16,7 +16,7 @@ function Article({articles}) {
             <Link to='/'>Back Home</Link>
             <img src={chosenArticle.urlToImage} alt={`${chosenArticle.description}`} />
             <p className="date">{chosenArticle.date}</p>
-            <p className="source">{chosenArticle.source.name}</p>
+            <p className="source">source: {chosenArticle.source.name}</p>
             <aside>
                 <h2>{chosenArticle.title}</h2>
                 <p>{chosenArticle.content}</p>
