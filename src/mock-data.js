@@ -1,6 +1,6 @@
 const data = {
     "status": "ok",
-    "totalResults": 20,
+    "totalResults": 19,
     "articles": [
         {
         "source": {
@@ -118,19 +118,6 @@ const data = {
         "urlToImage": "https://www.washingtonpost.com/wp-apps/imrs.php?src=https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/WLUGA2XNIB4S26OYNXCQPKUYHE.jpg&w=1440",
         "publishedAt": "2024-04-30T14:07:20Z",
         "content": "Hells Kitchen, Illinoise, The Outsiders, Suffs and Water for Elephants will contend for best musical at the Tony Awards and stars including Rachel McAdams, Jeremy Strong and Jessica Lange are also up… [+280 chars]"
-        },
-        {
-        "source": {
-            "id": null,
-            "name": "[Removed]"
-        },
-        "author": null,
-        "title": "[Removed]",
-        "description": "[Removed]",
-        "url": "https://removed.com",
-        "urlToImage": null,
-        "publishedAt": "1970-01-01T00:00:00Z",
-        "content": "[Removed]"
         },
         {
         "source": {
