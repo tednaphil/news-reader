@@ -58,3 +58,20 @@ a {
     transform: rotate(360deg);
   }
 }
+
+@media screen and (max-width: 767px) {
+  .App-header {
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    & h1 {
+      margin: 15px 0;
+    }
+    & input {
+      margin: 10px auto;
+      text-align: center;
+      padding: 0;
+    }
+  }
+  
+}
