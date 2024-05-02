@@ -40,7 +40,7 @@
 - Wins
   ```
   - succesful MVP development using small set of mock data
-  - accesibility audits completed with Lighthouse and Wave
+  - Lighthouse accessibility audits passing at 100%
   ```
 
 ## Wireframe:
