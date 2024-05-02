@@ -17,15 +17,15 @@ function Articles({articles}) {
 
     if(articles.length) {
         return(
-            <>
+            <section className='articles'>
               {previews}
-            </>
+            </section>
         )
     }
     if (!articles.length) {
         return(
             <>
-              <h2>No results</h2>
+              <h2 className='articles'>No results</h2>
             </>
         )
     }
@@ -34,5 +34,5 @@ function Articles({articles}) {
 export default Articles;
 
 Articles.propTypes = {
-    articles: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)).isRequired
+    articles: PropTypes.arrayOf(PropTypes.object).isRequired
 }

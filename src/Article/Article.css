@@ -1,10 +1,16 @@
 .article-view {
     display: flex;
     flex-direction: row;
-    margin-top: 30px;
+    margin-top: 210px;
     & img {
         width: 500px;
     }
+}
+
+.home-button {
+    position: fixed;
+    right: 15px;
+    top: 170px;
 }
 
 .summary-column {
@@ -33,9 +39,16 @@
 }
 
 @media screen and (max-width: 767px) {
+    .article-view {
+        margin-top: 185px;
+    }
     .summary-column {
         & img {
             width: 300px;
         }
+    }
+    .home-button {
+        position: fixed;
+        top: 150px;
     }
 }

@@ -16,7 +16,7 @@ function Article({articles}) {
     if(chosenArticle) {
         return(
             <>
-            <Link to='/'>Back Home</Link>
+            <Link className='home-button' to='/'>Back Home</Link>
             <div className='article-view'>
                 <aside className='summary-column'>
                     <img src={chosenArticle.urlToImage} alt={`${chosenArticle.description}`} />
@@ -47,5 +47,5 @@ function Article({articles}) {
 export default Article;
 
 Article.propTypes = {
-    articles: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)).isRequired
+    articles: PropTypes.arrayOf(PropTypes.object).isRequired
 }
