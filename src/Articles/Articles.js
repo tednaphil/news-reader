@@ -3,10 +3,10 @@ import Preview from "../Preview/Preview";
 import PropTypes from 'prop-types';
 
 function Articles({articles}) {
-    const previews = articles.map(({publishedAt, title, urlToImage, date, description}) => {
+    const previews = articles.map(({publishedAt, title, urlToImage, date, description}, index) => {
         return (
             <Preview 
-            key={publishedAt}
+            key={index}
             title={title}
             image={urlToImage}
             date={date}

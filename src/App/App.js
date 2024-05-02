@@ -18,16 +18,19 @@ function App() {
   const {pathname} = useLocation();
 
   useEffect(() => {
-    // fetchNews()
-    const newData = cleanData(data.articles)
-    setArticles(newData)
-    setFilteredArticles(newData)
+    fetchNews()
+    // const newData = cleanData(data.articles)
+    // setArticles(newData)
+    // setFilteredArticles(newData)
   }, [])
 
   useEffect(() => {
     const filtered = filterArticles(query)
-    if (query.trim().length){
+    if (query.trim().length) {
       setFilteredArticles(filtered)
+    }
+    if (query === '') {
+      setFilteredArticles(articles)
     }
   }, [query])
 
