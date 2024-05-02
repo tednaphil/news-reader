@@ -1,6 +1,6 @@
 import { useParams, Link } from "react-router-dom";
 import './Article.css';
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import PropTypes from 'prop-types';
 
 function Article({articles}) {
@@ -47,5 +47,5 @@ function Article({articles}) {
 export default Article;
 
 Article.propTypes = {
-    articles: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string))
+    articles: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)).isRequired
 }

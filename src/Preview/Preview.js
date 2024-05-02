@@ -17,4 +17,11 @@ function Preview({ image, title, description, date }) {
     )
 }
 
-export default Preview
+export default Preview;
+
+Preview.propTypes = {
+    image: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    date: PropTypes.string.isRequired,
+}

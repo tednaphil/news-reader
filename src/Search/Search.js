@@ -18,4 +18,8 @@ function Search({setQuery}) {
     )
 }
 
-export default Search
+export default Search;
+
+Search.propTypes = {
+    setQuery: PropTypes.func
+}

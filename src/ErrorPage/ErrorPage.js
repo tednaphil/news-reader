@@ -4,12 +4,12 @@ import PropTypes from 'prop-types';
 
 function ErrorPage({error}) {
     if(error) {
-    return (
-        <>
-          <h2>Something went wrong!</h2>
-          <p>{error}</p>
-        </>
-    )
+      return(
+          <>
+            <h2>Something went wrong!</h2>
+            <p>{error}</p>
+          </>
+      )
     }
 
     if(!error) {
@@ -19,8 +19,11 @@ function ErrorPage({error}) {
           <Link to='/'>Back Home</Link>
         </>
         )
-        
     }
 }
 
-export default ErrorPage
+export default ErrorPage;
+
+Error.propTypes = {
+  error: PropTypes.string
+}

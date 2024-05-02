@@ -31,4 +31,8 @@ function Articles({articles}) {
     
 }
 
-export default Articles
+export default Articles;
+
+Articles.propTypes = {
+    articles: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)).isRequired
+}
