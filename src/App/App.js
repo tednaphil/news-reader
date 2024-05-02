@@ -15,7 +15,7 @@ function App() {
   const [filteredArticles, setFilteredArticles] = useState([]);
   const [error, setError] = useState('');
   const [query, setQuery] = useState('');
-  const {pathname} = useLocation()
+  const {pathname} = useLocation();
 
   useEffect(() => {
     // fetchNews()
@@ -26,7 +26,6 @@ function App() {
 
   useEffect(() => {
     const filtered = filterArticles(query)
-    // console.log({filtered})
     if (query.trim().length){
       setFilteredArticles(filtered)
     }
@@ -38,7 +37,6 @@ function App() {
       const newData = cleanData(news.articles)
       setArticles(newData)
       setFilteredArticles(newData)
-      // console.log(news)
     } catch (error) {
       setError(`${error}`)
     }
@@ -61,8 +59,6 @@ function App() {
   }
 
   function filterArticles(queryInput) {
-    // console.log({queryInput})
-    // articles.forEach(article => console.log(article.title.includes(queryInput)))
     return articles.filter(article => article.title.toLowerCase().includes(queryInput) || article.description.toLowerCase().includes(queryInput))
   }
 
@@ -73,7 +69,6 @@ function App() {
           <h1>News Reader</h1>
           {pathname === '/' && <Search setQuery={setQuery} />}
         </header>
-        {/* {query.trim().length > 0 && <p>Results: {filteredArticles.length}</p>} */}
         <Routes>
           <Route path='/' element={<Articles articles={filteredArticles} />}></Route>
           <Route path='/articles/:articleTitle' element={<Article articles={articles}/>}></Route>

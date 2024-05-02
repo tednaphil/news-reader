@@ -2,7 +2,6 @@ const KEY = process.env.REACT_APP_NEWS_API_KEY
 
 const getNews = async () => {
     try {
-        // console.log(KEY)
         const response = await fetch(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${KEY}`)
         if (!response.ok) {
             const status = response.status

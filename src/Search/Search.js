@@ -5,8 +5,8 @@ import PropTypes from 'prop-types';
 function Search({setQuery}) {
     const [search, setSearch] = useState('')
 
-    function updateSearch(e) {
-        const query = e.toLowerCase()
+    function updateSearch(input) {
+        const query = input.toLowerCase()
         setSearch(query)
         setQuery(query)
     }
