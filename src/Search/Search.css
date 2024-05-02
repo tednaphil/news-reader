@@ -1,0 +1,22 @@
+::placeholder {
+    color: lightgray;
+}
+input {
+    height: 50px;
+    margin-top: 50px;
+    margin-right: 10px;
+    padding-left: 15px;
+    width: 400px;
+    font-size: 1.5rem;
+    border-radius: 80px;
+  }
+
+  @media screen and (max-width: 767px) {
+    input {
+        margin: 0 auto;
+        text-align: center;
+        padding: 0;
+        width: 300px;
+        font-size: 1rem;
+      }
+  }

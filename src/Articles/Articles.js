@@ -1,23 +1,38 @@
 import './Articles.css';
 import Preview from "../Preview/Preview";
+import PropTypes from 'prop-types';
 
 function Articles({articles}) {
-    const previews = articles.map(article => {
+    const previews = articles.map(({title, urlToImage, date, description}, index) => {
         return (
             <Preview 
-            key={article.publishedAt}
-            title={article.title}
-            image={article.urlToImage}
-            date={article.date}
-            description={article.description}
+            key={index}
+            title={title}
+            image={urlToImage}
+            date={date}
+            description={description}
             />
         )
     })
-    return(
-        <>
-        {previews}
-        </>
-    )
+
+    if(articles.length) {
+        return(
+            <section className='articles'>
+              {previews}
+            </section>
+        )
+    }
+    if (!articles.length) {
+        return(
+            <>
+              <h2 className='articles'>No results</h2>
+            </>
+        )
+    }
 }
 
-export default Articles
+export default Articles;
+
+Articles.propTypes = {
+    articles: PropTypes.arrayOf(PropTypes.object).isRequired
+}
