@@ -1,12 +1,17 @@
 import { useParams, Link } from "react-router-dom";
 import './Article.css';
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import PropTypes from 'prop-types';
 
-function Article({articles}) {
+function Article({articles, setQuery, setFilteredArticles}) {
     const { articleTitle } = useParams()
     const currentArticle = findArticle(articleTitle)
     const [chosenArticle, setChosenArticle] = useState(currentArticle)
+    
+    useEffect(() => {
+        setQuery('')
+        setFilteredArticles(articles)
+    }, [])
     
 
     function findArticle(title) {
@@ -47,5 +52,7 @@ function Article({articles}) {
 export default Article;
 
 Article.propTypes = {
-    articles: PropTypes.arrayOf(PropTypes.object).isRequired
+    articles: PropTypes.arrayOf(PropTypes.object).isRequired,
+    setQuery: PropTypes.func.isRequired,
+    setFilteredArticles: PropTypes.func.isRequired
 }

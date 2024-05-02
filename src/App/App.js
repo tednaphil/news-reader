@@ -71,7 +71,7 @@ function App() {
         </header>
         <Routes>
           <Route path='/' element={<Articles articles={filteredArticles} />}></Route>
-          <Route path='/articles/:articleTitle' element={<Article articles={articles}/>}></Route>
+          <Route path='/articles/:articleTitle' element={<Article articles={articles} setQuery={setQuery} setFilteredArticles={setFilteredArticles}/>}></Route>
           <Route path='/*' element={<ErrorPage error={error} />}></Route>
         </Routes>
       </div>
