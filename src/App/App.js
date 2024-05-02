@@ -58,7 +58,9 @@ function App() {
         article.description = 'no description available'
       }
     })
-    return updatedData
+
+    const siftedData = updatedData.filter(article => article.title !== '[Removed]')
+    return siftedData
   }
 
   function filterArticles(queryInput) {
