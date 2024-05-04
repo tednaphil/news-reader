@@ -1,6 +1,6 @@
 # <p align="center">🗞️News Reader📰</p>
 
-<p align="center">Browse today's top articles! User can search for articles by headline or description content. <br/> <a href='https://news-reader-rho.vercel.app/'>✨Visit the app here!✨</a></p>
+<p align="center">Browse today's top articles! Users can search for articles by headline or description content and view an articles details with a click.</p>
 
 ## Preview:
 <div align="center">
@@ -15,7 +15,6 @@
   <img src="https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=fff&style=for-the-badge" alt="html badge">
   <img src="https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=fff&style=for-the-badge" alt="css badge">
   <img src="https://img.shields.io/badge/Lighthouse-F44B21?logo=lighthouse&logoColor=fff&style=for-the-badge" alt="lighthouse badge">
-  <img src="https://img.shields.io/badge/Vercel-000?logo=vercel&logoColor=fff&style=for-the-badge" alt="vercel badge">
 </div>
 
 ## Installation Instructions:
