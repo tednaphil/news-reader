@@ -2,6 +2,7 @@ import { useParams, Link } from "react-router-dom";
 import './Article.css';
 import { useState, useEffect } from "react";
 import PropTypes from 'prop-types';
+import ErrorPage from "../ErrorPage/ErrorPage";
 
 function Article({articles, setQuery, setFilteredArticles}) {
     const { articleTitle } = useParams()
@@ -41,10 +42,7 @@ function Article({articles, setQuery, setFilteredArticles}) {
 
     if(!chosenArticle) {
         return(
-            <>
-                <h2>Whoops! Article not found.</h2>
-                <Link to='/'>Back Home</Link>
-            </>
+            <ErrorPage error={`We couldn't find that article.`} />
         )
     }
 }
